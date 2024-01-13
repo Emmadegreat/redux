@@ -9,8 +9,13 @@ const Header = () => {
 
     return (
         <div className='bg-blue-700 h-[70px] flex justify-center text-white items-center'>
-            <NavLink to='/' className="mx-4" style={{ display:isAuthenticated? "bock":"none"}}>Home</NavLink>
-             <NavLink to='/login'>{isAuthenticated ? 'Logout' : 'Login'}</NavLink>
+
+                <div>
+                    <NavLink to='/' className="mx-4"> Home</NavLink>
+
+                </div>
+
+            {isAuthenticated ? (<NavLink to='/profile' className="mx-4">profile</NavLink>) :(<NavLink to='/login' className="mx-4">login</NavLink>)}
         </div>
     )
 }

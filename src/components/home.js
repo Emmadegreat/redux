@@ -4,11 +4,11 @@ import { selectIsauthenticated } from '../redux/slice'
 import { useSelector } from 'react-redux'
 
 const Home = () => {
-    const isAuthenticated = useSelector(selectIsauthenticated);
+    /*const isAuthenticated = useSelector(selectIsauthenticated);
     if (!isAuthenticated) {
        alert('Please login before continuing');
         <Link to="/login" />;
-    }
+    }*/
     return (
         <div>
             <h2>Home here</h2>

@@ -6,21 +6,21 @@ const Login = () => {
 
     const dispatch = useDispatch();
 
-    const handlelogin = () => {
-        window.location.href = "/";
-        dispatch(login())
+    const handlelogin = (e) => {
+        e.preventDefault();
+        dispatch(login());
     };
 
 
 
 
-   return (
+    return (
        <div className='flex m-auto flex-col items-center'>
            <h2 className='my-2 text-2xl font-bold'>Login</h2>
-            <form action="" className='w-[300px] md:w-[20%] m-auto' onSubmit={handlelogin}>
+            <form action="" className='w-[300px] md:w-[20%] m-auto' >
                 <input type="email" placeholder='email' required className=' border-cyan-600 border-2 rounded p-[0.4rem] mb-4 w-[100%]'/> <br />
                <input type="password" placeholder='password' required className='p-[0.4rem] mb-4 w-[100%] border-cyan-600 border-2 rounded' /> <br />
-               <button type='submit' className='p-[0.4rem] border-2 rounded w-[100%] border-cyan-400 bg-cyan-600 text-white'>Login</button>
+               <button type='submit' onClick={handlelogin} className='p-[0.4rem] border-2 rounded w-[100%] border-cyan-400 bg-cyan-600 text-white'>Login</button>
             </form>
      </div>
    )
